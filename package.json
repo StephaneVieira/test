@@ -48,11 +48,20 @@
             "fr",
             "en"
           ]
+        },
+        "cities": {
+          "type": "array",
+          "title": "Cities",
+          "items": {
+            "title": "City #{{idx}}",
+            "type": "string"
+          }
         }
       },
       "form": [
         "datasources.mapsBureaux",
-        "datasources.mapsClients"
+        "datasources.mapsClients",
+        "cities"
       ]
     }
   }
