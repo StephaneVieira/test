@@ -1,0 +1,68 @@
+{
+  "name": "afpboard",
+  "fullName": "AFP Board",
+  "version": "0.1.3",
+  "description": "Windows 8 application displaying a fullscreen map with all AFP offices and clients",
+  "keywords": [
+    "afp",
+    "board",
+    "worldmap"
+  ],
+  "joshfire": {
+    "images": {
+      "small": "marketing/image-small.png",
+      "big": "marketing/image-big.png"
+    },
+    "devices": [
+      {
+        "devices": "*",
+        "startfile": "app/maps.html",
+        "images": "marketing/image-small.png",
+        "screenshots": [
+          "marketing/image-small.png"
+        ]
+      }
+    ],
+    "datasources": {
+      "mapsBureaux": {
+        "title": "Offices data",
+        "description": "Datasource that returns the AFP offices data",
+        "inputType": [
+          "Article"
+        ]
+      },
+      "mapsClients": {
+        "title": "Clients data",
+        "description": "Datasource that returns the AFP clients data",
+        "inputType": [
+          "Article"
+        ]
+      }
+    },
+    "options": {
+      "schema": {
+        "language": {
+          "title": "Language",
+          "type": "select",
+          "enum": [
+            "fr",
+            "en"
+          ]
+        },
+        "cities": {
+          "type": "array",
+          "title": "Cities",
+          "items": {
+            "title": "City #{{idx}}",
+            "type": "string"
+          }
+        }
+      },
+      "form": [
+        "datasources.mapsBureaux",
+        "datasources.mapsClients",
+        "cities"
+      ]
+    }
+  }
+}
