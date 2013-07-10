@@ -103,6 +103,7 @@
           "type": "object",
           "joshfire:definedFor": [
             "tv-web",
+            "phone-ios",
             "tv-samsungsmarttv"
           ]
         },
